@@ -1,0 +1,286 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Harry Potter: Hogwarts History",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "t-shirt",
+        "price": 19.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1690022527_4976398.jpg?format=webp&w=640&dpr=1.5",
+        "description": "This is product 1",
+        "sizes": ["M", "L", "XL"],
+        "collection":"newarrivals"
+      },
+      {
+        "id": 2,
+        "name": "Supima: Teal",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "t-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682421910_4642471.jpg?format=webp&w=640&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"],
+        "collection":"newarrivals"
+      },
+      {
+          "id": 3,
+          "name": "Star Wars: Powerful Jedi",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "oversizedfullsleevest-shirt",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"newarrivals"
+      },
+      {
+          "id": 4,
+          "name": "Superman: Man of Steel",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "fullsleevest-shirt",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"activewears"
+      } ,
+      {
+        "id": 5,
+        "name": "Harry Potter: Hogwarts History",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "shirt",
+        "price": 19.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1690022527_4976398.jpg?format=webp&w=640&dpr=1.5",
+        "description": "This is product 1",
+        "sizes": ["M", "L", "XL"],
+        "collection":"activewears"
+      },
+      {
+        "id": 6,
+        "name": "Supima: Teal",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "polos",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682421910_4642471.jpg?format=webp&w=640&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"],
+        "collection":"activewears"
+      },
+      {
+          "id": 7,
+          "name": "Star Wars: Powerful Jedi",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "hoodiesjacket",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"bestsellers"
+      },
+      {
+          "id": 8,
+          "name": "Superman: Man of Steel",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "sweatshirtsweater",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"bestsellers"
+      },
+      {
+        "id": 9,
+        "name": "Supima: Teal",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "coordset",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682421910_4642471.jpg?format=webp&w=640&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"],
+        "collection":"bestsellers"
+      },
+      {
+          "id": 10,
+          "name": "Star Wars: Powerful Jedi",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "drop-cutt-shirt",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"hottestdeals"
+      },
+      {
+          "id": 11,
+          "name": "Superman: Man of Steel",
+          "gender": "Mens",
+          "category":"topwear",
+          "subcategory": "graphicsoversizedt-shirt",
+          "price": 29.99,
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+          "description": "This is product 2",
+          "sizes": ["M", "L", "XL"],
+          "collection":"hottestdeals"
+      },
+      {
+        "id": 12,
+        "name": "Solids: Mid Blue",
+        "gender": "Mens",
+        "category":"bottomwear",
+        "subcategory": "joggers",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1690015098_8476537.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"],
+        "collection":"hottestdeals"
+      },
+      {
+        "id": 13,
+        "name": "Solids: Black",
+        "gender": "Mens",
+        "category":"bottomwear",
+        "subcategory": "Cotton Pants",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1662817409_5004985.jpg?format=webp&w=360&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"],
+        "collection":"hottestdeals"
+      },
+      {
+        "id": 14,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 15,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 16,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 17,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 18,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 19,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 20,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"topwear",
+        "subcategory": "graphicsoversizedt-shirt",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 21,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"accessories",
+        "subcategory": "shoes",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },                  
+      {
+        "id": 22,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"accessories",
+        "subcategory": "perfumes",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 23,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"accessories",
+        "subcategory": "backpacks",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 24,
+        "name": "Superman: Man of Steel",
+        "gender": "Mens",
+        "category":"accessories",
+        "subcategory": "socks",
+        "price": 29.99,
+        "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1678883388_4393002.jpg?format=webp&w=240&dpr=1.5",
+        "description": "This is product 2",
+        "sizes": ["M", "L", "XL"]
+      } 
+       
+  
+  
+      
+    ]
+  }
+  
