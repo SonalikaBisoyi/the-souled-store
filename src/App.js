@@ -5,7 +5,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import AllRoutes from './Components/AllRoutes';
 import Footer from './Components/Footer';
-import NavBar from './Components/NavBar';
+
+import Navbar from './Components/Navbar';
+
+
+
+;
+
 function App() {
  const [mens , setmens] = useState(false)
  const [womens , setwomens] = useState(false)
@@ -75,7 +81,9 @@ function App() {
        
 
     </Box>
-      <NavBar />
+
+      <AllRoutes/>
+      <Navbar />
       <AllRoutes val={mens ? 'Mens' : womens ? 'Womens' : kids ? 'Kids' : 'Mens'} />
 
       <Footer/>

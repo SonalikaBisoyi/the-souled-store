@@ -5,18 +5,18 @@ import MainFooter from './mainFooter';
 
 const Footer = () => {
   return (
-    <div className='Footer'  style={{marginTop:"30px"}}>
+    <div className='Footer' id='footer'  style={{marginTop:"30px"}}>
          <Text fontWeight={"bold"} fontSize="4xl">MEMBERSHIP</Text>
       
         <Box style={{width:"98%", margin:"auto" , marginTop:"20px"}}>
-            <Image src={membership} alt="membership"/>
+            <Image src={membership} alt="membership" href='/membership'/>
         </Box>
 
          <Box className='indian brand' style={{ height:"80px" , margin:"auto" , marginTop:"50px" , backgroundColor:"#e71318"}}>
             <Center><Text  marginTop={15} fontSize={{base:"xl" , md:"2xl" , lg:"3xl"}} letterSpacing={5} color="white">HOMEGROWN INDIAN BRAND</Text></Center>
          </Box>
 
-           <Text fontWeight={"semibold"} fontSize="4xl" marginTop={10}>Over 5.5 Million Happy Customers</Text>
+           <Text fontWeight={"semibold"} fontSize="4xl" marginTop={10}>Over 6 Million Happy Customers</Text>
 
            <Box className='main foooter' marginTop={20}>
                <MainFooter/>

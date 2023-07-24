@@ -55,7 +55,7 @@ export default function WithSubnavigation() {
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+            display={{ base: 'flex', md: 'none' }} >
           <IconButton
             onClick={onToggle}
             icon={
@@ -73,7 +73,7 @@ export default function WithSubnavigation() {
             <Link to={"/"}><img style={{ borderRadius:"50%"}}  src={'https://th.bing.com/th?id=OIP.YpMd_DVK4Lh7uPL41HR2_QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2'} alt="logo" width="80px" height="50px"/></Link>
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: 'none', md: 'flex' }} ml={11}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -85,7 +85,7 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}
+          spacing={2}
            alignItems="center"
           >
           
@@ -237,8 +237,8 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
+    <Stack spacing={4} onClick={children && onToggle} marginTop={'100px'}>
+      <Flex 
         py={2}
         as={Link}
         href={href ?? '#'}
@@ -247,7 +247,7 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: 'none',
         }}>
-        <Text
+        <Text 
           fontWeight={600}
           color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
@@ -463,7 +463,11 @@ const NAV_ITEMS= [
   
   {
     label: 'MEMBERSHIP',
-    
+    href: '.footer',
+
+  },
+  {
+    label: 'CONTACT',
 
   },
 ];
