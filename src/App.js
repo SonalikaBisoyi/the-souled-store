@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import AllRoutes from './Components/AllRoutes';
 import Footer from './Components/Footer';
-import NavBar from './Components/NavBar';
+import Navbar from './Components/Navbar';
 
 
 
@@ -88,7 +88,7 @@ function App() {
        
 
     </Box>
-      <NavBar />
+      <Navbar />
       <AllRoutes/>
       <Footer/>
     </div>
