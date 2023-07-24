@@ -6,10 +6,6 @@ import './App.css';
 import AllRoutes from './Components/AllRoutes';
 import Footer from './Components/Footer';
 import NavBar from './Components/NavBar';
-
-
-
-
 function App() {
  const [mens , setmens] = useState(false)
  const [womens , setwomens] = useState(false)
@@ -17,32 +13,23 @@ function App() {
  
  const navigate = useNavigate
 
- const onClicked = (val)=>{
-       if(val==="mens"){
-         <>
-          {setmens(true)}
-          {setwomens(false)}
-          {setkids(false)}
-         { navigate("/mens")}
-         </>
-       }
-      else if(val==="womens"){
-        <>
-         {setwomens(true) }
-         {setmens(false)}
-         {setkids(false)}
-         
-        </>
-      }
-      else if(val==="kids"){
-        <>
-         {setwomens(false) }
-         {setmens(false)}
-         {setkids(true)}
-       
-        </>
-      }
- }
+ const onClicked = (val) => {
+  if (val === "mens") {
+    setmens(true);
+    setwomens(false);
+    setkids(false);
+    navigate("/mens");
+  } else if (val === "womens") {
+    setwomens(true);
+    setmens(false);
+    setkids(false);
+  } else if (val === "kids") {
+    setwomens(false);
+    setmens(false);
+    setkids(true);
+  }
+};
+
 
   return (
     <div className="App">
@@ -89,10 +76,97 @@ function App() {
 
     </Box>
       <NavBar />
-      <AllRoutes/>
+      <AllRoutes val={mens ? 'Mens' : womens ? 'Womens' : kids ? 'Kids' : 'Mens'} />
+
       <Footer/>
     </div>
   );
 }
 
 export default App;
+// import { Box, Button } from '@chakra-ui/react';
+// import { useState } from 'react';
+// import { Link, useNavigate } from 'react-router-dom';
+// import './App.css';
+// import AllRoutes from './Components/AllRoutes';
+// import Footer from './Components/Footer';
+// import NavBar from './Components/NavBar';
+
+// function App() {
+//   const [selectedGender, setSelectedGender] = useState('mens');
+//   const navigate = useNavigate();
+
+//   const onClicked = (val) => {
+//     if (val === 'mens') {
+//       setSelectedGender('mens');
+//       navigate('/mens');
+//     } else if (val === 'womens') {
+//       setSelectedGender('womens');
+//       navigate('/womens');
+//     } else if (val === 'kids') {
+//       setSelectedGender('kids');
+//       navigate('/kids');
+//     }
+//   };
+
+//   return (
+//     <div className="App">
+//       <Box
+//         style={{
+//           height: "50px",
+//           width: "100%",
+//           border: "1px solid red",
+//           backgroundColor: "red",
+//           position: "fixed",
+//           top: "0px",
+//           zIndex: "999",
+//         }}
+//       >
+//         <Box
+//           height={"100%"}
+//           alignItems={"end"}
+//           marginLeft="150px"
+//           width={"fit-content"}
+//         >
+//           <Button
+//             style={{
+//               backgroundColor: selectedGender === "mens" ? "white" : "#e11b23",
+//               color: selectedGender === "mens" ? "black" : "white",
+//             }}
+//             onClick={() => onClicked("mens")}
+//             height={"100%"}
+//           >
+//             <Link to={"/mens"}>MENS</Link>
+//           </Button>
+
+//           <Button
+//             style={{
+//               backgroundColor: selectedGender === "womens" ? "white" : "#e11b23",
+//               color: selectedGender === "womens" ? "black" : "white",
+//             }}
+//             onClick={() => onClicked("womens")}
+//             height={"100%"}
+//           >
+//             <Link to={"/womens"}>WOMENS</Link>
+//           </Button>
+
+//           <Button
+//             style={{
+//               backgroundColor: selectedGender === "kids" ? "white" : "#e11b23",
+//               color: selectedGender === "kids" ? "black" : "white",
+//             }}
+//             onClick={() => onClicked("kids")}
+//             height={"100%"}
+//           >
+//             <Link to={"/kids"}>KIDS</Link>
+//           </Button>
+//         </Box>
+//       </Box>
+//       <NavBar />
+//       <AllRoutes />
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;

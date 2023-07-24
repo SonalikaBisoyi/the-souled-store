@@ -291,57 +291,57 @@ const NAV_ITEMS= [
       {
         label: 'T-Shirt',
         
-        href: '#',
+        href: '/topwear/t-shirt',
       },
       {
         label: 'Oversized T-shirt',
         
-        href: '#',
+        href: '/topwear/oversizedt-shirt',
       },
       {
         label: 'Oversized Full Sleeves T-shirt ',
         
-        href: '#',
+        href: '/topwear/oversizedfullsleevest-shirt',
       },
       {
         label: 'Full Sleeves T-shirt ',
         
-        href: '#',
+        href: '/topwear/fullsleevest-shirt',
       },
       {
         label: 'Shirt',
         
-        href: '#',
+        href: '/topwear/shirt',
       },
       {
         label: 'Polos',
         
-        href: '#',
+        href: '/topwear/polos',
       },
       {
         label: 'Hoodies Jackets',
         
-        href: '#',
+        href: '/topwear/hoodiesjacket',
       },
       {
         label: 'SweatShirt  Sweaters',
         
-        href: '#',
+        href: '/topwear/sweatshirtsweater',
       },
       {
         label: 'Co-ord Sets',
         
-        href: '#',
+        href: '/topwear/coordset',
       },
       {
         label: 'Drop-cut T-Shirt',
         
-        href: '#',
+        href: '/topwear/drop-cutt-shirt',
       },
       {
         label: 'Graphics Oversized T-shirt',
         
-        href: '#',
+        href: '/topwear/graphicsoversizedt-shirt',
       },
       
     ],
@@ -353,7 +353,7 @@ const NAV_ITEMS= [
       {
         label: 'Joggers',
         
-        href: '#',
+        href: '/bottomwear/joggers',
       },
       {
         label: 'Freestyle Leggings ',
@@ -386,24 +386,25 @@ const NAV_ITEMS= [
   },
 
   {
-    label: 'CATEGORY',
-    children: [
-      {
-        label: 'Mens',
-        subLabel: 'Shop By Mens Category',
-        href: '/mensproducts',
-      },
-      {
-        label: 'Womens',
-        subLabel: 'Shop By Womens Category',
-        href: '/womensproducts',
-      },
-      {
-        label: 'Kids',
-        subLabel: 'Shop By Kids Category',
-        href: '/kidsproducts',
-      },
-    ],
+    label: 'BASICS',
+    href:'/basics'
+    // children: [
+    //   {
+    //     label: 'Mens',
+    //     subLabel: 'Shop By Mens Category',
+    //     href: '/mensproducts',
+    //   },
+    //   {
+    //     label: 'Womens',
+    //     subLabel: 'Shop By Womens Category',
+    //     href: '/womensproducts',
+    //   },
+    //   {
+    //     label: 'Kids',
+    //     subLabel: 'Shop By Kids Category',
+    //     href: '/kidsproducts',
+    //   },
+    // ],
   },
   {
     label: 'COLLECTIONS',
@@ -411,22 +412,22 @@ const NAV_ITEMS= [
       {
         label: 'New Arrivals',
         
-        href: '#',
+        href: '/collections/newarrivals',
       },
       {
         label: 'Active Wears',
         
-        href: '#',
+        href: '/collections/activewears',
       },
       {
         label: 'Best Sellers',
         
-        href: '#',
+        href: '/collections/bestsellers',
       },
       {
         label: 'Hottest Deals',
         
-        href: '#',
+        href: '/collections/hottestdeals',
       },
       
     ],
@@ -436,34 +437,24 @@ const NAV_ITEMS= [
     label: 'ACCESSORIES',
     children: [
       {
-        label: 'Footwear',
+        label: 'Shoes',
         
-        href: '#',
+        href: '/accessories/shoes',
       },
       {
         label: 'Perfume',
         
-        href: '#',
+        href: '/accessories/perfumes',
       },
       {
         label: 'BackPacks',
         
-        href: '#',
+        href: '/accessories/backpacks',
       },
       {
-        label: 'Shocks',
+        label: 'Socks',
         
-        href: '#',
-      },
-      {
-        label: 'All Days Pants',
-        
-        href: '#',
-      },
-      {
-        label: 'Pajamas',
-        
-        href: '#',
+        href: '/accessories/socks',
       }
       
     ],

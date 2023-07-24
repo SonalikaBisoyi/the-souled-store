@@ -1,10 +1,11 @@
 {
-  "name": "souled_apprial",
+  "name": "the-souled-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
+    "@chakra-ui/slider": "^2.1.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -50,3 +51,4 @@
     ]
   }
 }
+
