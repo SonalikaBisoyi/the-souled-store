@@ -85,7 +85,7 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}
+          spacing={3}
            alignItems="center"
           >
           
@@ -237,7 +237,7 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} onClick={children && onToggle} marginTop={'120px'}>
       <Flex
         py={2}
         as={Link}
@@ -463,6 +463,11 @@ const NAV_ITEMS= [
   
   {
     label: 'MEMBERSHIP',
+    
+
+  },
+  {
+    label: 'CONTACT',
     
 
   },
