@@ -463,7 +463,7 @@ const NAV_ITEMS= [
   
   {
     label: 'MEMBERSHIP',
-    
+    href:'/membership'
 
   },
   {

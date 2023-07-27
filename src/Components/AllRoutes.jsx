@@ -9,6 +9,7 @@ import Bottomwear from '../Pages/Bottomwear';
 import BasicsPage from '../Pages/BasicsPage'; 
 import CollectionsPage from '../Pages/CollectionsPage'; 
 import AccessoriesPage from '../Pages/AccessoriesPage';
+import Membership from '../Pages/Membership';
 
 const AllRoutes = ({ val }) => {
   return (
@@ -22,7 +23,7 @@ const AllRoutes = ({ val }) => {
          <Route path='/basics'element={<BasicsPage gender={val} />} /> 
          <Route path='/collections/:collection'element={<CollectionsPage gender={val} />} /> 
          <Route path='/accessories/:subcategory'element={<AccessoriesPage gender={val} />} />      
- 
+         <Route path='/membership' element={<Membership/>}></Route>
     </Routes>
   )
 }
