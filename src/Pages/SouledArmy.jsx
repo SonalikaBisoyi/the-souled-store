@@ -4,7 +4,7 @@ import { Card,  CardBody, CardFooter, SimpleGrid, Text, Image, Container , Butto
 export default function SouledArmy() {
   return (
     <div marginTop="400px">
-      <Container as="div" pt="24px">
+      <Container as="div" pt="24px" marginTop={'120px'}>
          <Stack direction="row" justify="center" align="center" spacing={4}>
             <Button colorScheme="teal.600" mt={4} bg="teal.600" color="white"  fontWeight="bold" width="240px" >
             Get Featured

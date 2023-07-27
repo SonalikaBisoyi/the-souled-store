@@ -75,17 +75,17 @@ export default function MainFooter() {
 
           <Stack align={'flex-start'}>
             <Box color="red"><ListHeader>Company</ListHeader></Box>
-            <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Careers</Link>
+            <Link href={'/about'}>About Us</Link>
+            <Link href={'/careers'}>Careers</Link>
             <Link href={'#'}>Stores Near Me</Link>
             <Link href={'#'}>Community initiatives</Link>
-            <Link href={'#'}>Souled Army</Link>
+            <Link href={'/souledarmy'}>Souled Army</Link>
           </Stack>
 
           <Stack align={'flex-start'}>
           <Box color="red" > <ListHeader>More Info</ListHeader></Box>
-            <Link href={'#'}>T&C</Link>
-            <Link href={'#'}>Privacy Policy</Link>
+            <Link href={'/Tc'}>T&C</Link>
+            <Link href={'/Privacy'}>Privacy Policy</Link>
             <Link href={'#'}>Sitemap</Link>
           </Stack>
 
