@@ -1,7 +1,7 @@
 //home matlb mens cateogry
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, IconButton, useBreakpointValue,Grid,Text,Image} from '@chakra-ui/react';
+import { Box, IconButton, useBreakpointValue,Grid,Text,Image, Button} from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import { AiFillCrown } from "react-icons/ai";
@@ -106,6 +106,7 @@ const Membership = () => {
             backgroundSize="cover"
             backgroundImage={silder1}
             width={{base:"300px" ,md:"450px" , lg:"80%" , xl:"100%"}}
+            
            
           />
            <Box
@@ -137,7 +138,7 @@ const Membership = () => {
           />
       </Slider>
     </Box>
-    <Box>
+<Box>
         <Text fontWeight={"semibold"} fontSize="4xl" textDecorationLine={'underline'}>Membership Benifits</Text>
     <Grid columns={2} spacing={10}gridTemplateColumns={{base:"repeat(1,1fr)", md:"repeat(2,1fr)" , lg:"repeat(2,1fr)"}}  margin={'80px'} gap="30px">
   
@@ -181,7 +182,45 @@ const Membership = () => {
   </Box>
 </Grid>
 </Box>
-    </div>
+
+
+<Box backgroundColor={'gray.100'} padding={'30px'}>
+<Text fontWeight={"semibold"} fontSize="4xl" >Become A Member</Text>
+<Grid columns={3} spacing={10}gridTemplateColumns={{base:"repeat(1,1fr)", md:"repeat(2,1fr)" , lg:"repeat(3,1fr)"}}  margin={'30px'} gap="60px">
+  
+  
+  <Box display={'flex'} border={'3px solid gray'} borderRadius={'20px'} justifyContent={'center'} padding={'30px'} boxShadow={'dark-lg'}>
+    <div>
+  <Text fontWeight={"bold"} fontSize="2xl" margin={'20px'}>12 Months</Text>
+  <Text fontSize="xl">(₹ 16.5/Month)</Text>
+  <Text fontWeight={"bold"} fontSize="2xl"  marginTop={'40px'}>₹ 199</Text>
+  <Text fontSize="sm" color={'teal'}>Save 83.2%</Text>
+  </div>
+   </Box>
+
+
+   <Box display={'flex'} border={'3px solid gray'} borderRadius={'20px'}  justifyContent={'center'} padding={'30px'}boxShadow={'dark-lg'}>
+    <div>
+  <Text fontWeight={"bold"} fontSize="2xl" margin={'20px'}>3 Months</Text>
+  <Text fontSize="xl">(₹ 49.6/Month)</Text>
+  <Text fontWeight={"bold"} fontSize="2xl"  marginTop={'40px'}>₹ 149</Text>
+  <Text fontSize="sm" color={'teal'}>Save 66.6%</Text>
+  </div>
+   </Box>
+
+
+   <Box display={'flex'} border={'3px solid gray'} borderRadius={'20px'}  justifyContent={'center'} padding={'30px'}boxShadow={'dark-lg'}>
+    <div>
+  <Text fontWeight={"bold"} fontSize="2xl" margin={'20px'}>1 Month</Text>
+  <Text fontSize="xl">(₹ 99/Month)</Text>
+  <Text fontWeight={"bold"} fontSize="2xl"  marginTop={'40px'}>₹ 99</Text>
+  </div>
+   </Box>
+   </Grid>
+   <Button fontWeight={"bold"} fontSize="2xl" backgroundColor={'red.400'}padding={'20px'}>Add Membership To Cart</Button>
+</Box>
+
+ </div>
   );
 }
 
