@@ -10,6 +10,9 @@ import BasicsPage from '../Pages/BasicsPage';
 import CollectionsPage from '../Pages/CollectionsPage'; 
 import AccessoriesPage from '../Pages/AccessoriesPage';
 import Membership from '../Pages/Membership';
+import About from '../Pages/About';
+import Careers from '../Pages/Careers';
+import SouledArmy from '../Pages/SouledArmy';
 
 const AllRoutes = ({ val }) => {
   return (
@@ -24,6 +27,9 @@ const AllRoutes = ({ val }) => {
          <Route path='/collections/:collection'element={<CollectionsPage gender={val} />} /> 
          <Route path='/accessories/:subcategory'element={<AccessoriesPage gender={val} />} />      
          <Route path='/membership' element={<Membership/>}></Route>
+         <Route path='/About' element={<About/>}></Route>
+         <Route path='/Careers' element={<Careers/>}></Route>
+         <Route path='/SouledArmy' element={<SouledArmy/>}></Route>
     </Routes>
   )
 }
