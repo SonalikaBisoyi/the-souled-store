@@ -2,7 +2,6 @@ import { ChakraProvider, Flex, Box, Heading, Button, Divider, Center } from "@ch
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
-import CartPage from "./Pages/CartPage";
 import Allroutes from "./Components/Allroutes";
 
 function App() {
@@ -64,7 +63,7 @@ function App() {
               CONTINUE SHOPPING
             </Button>
           </Box>
-          {cont ? <Allroutes /> : <CartPage />}
+          {cont && <Allroutes />}
         </Flex>
       </Router>
     </ChakraProvider>
