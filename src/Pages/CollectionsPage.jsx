@@ -206,7 +206,7 @@ const CollectionsPage = ({ gender }) => {
         <Flex className="cards-container" flexWrap="wrap" w="70%">
           {/* Product Cards */}
           {filteredProducts.map((product) => (
-        <Link key={product.id} to={`/topwear/${product.id}`}>
+        <Link key={product.id} to={`/collections/${product.subcategory}/${product.id}`}>
           <ProductCard
             product={product}
             selected={selectedProducts.includes(product.id)}

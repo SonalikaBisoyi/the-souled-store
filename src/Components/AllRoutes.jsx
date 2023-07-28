@@ -9,6 +9,12 @@ import Bottomwear from '../Pages/Bottomwear';
 import BasicsPage from '../Pages/BasicsPage'; 
 import CollectionsPage from '../Pages/CollectionsPage'; 
 import AccessoriesPage from '../Pages/AccessoriesPage';
+import SingleProductPage from '../Pages/SingleProductPage';
+import CartPage from '../Pages/CartPage';
+import Login from '../Pages/LoginPage';
+import Register from '../Pages/Register';
+import AddNewAddress from '../Pages/AddNewAddress';
+import Payment from '../Pages/Payment';
 import Membership from '../Pages/Membership';
 import About from '../Pages/About';
 import Careers from '../Pages/Careers';
@@ -27,6 +33,20 @@ const AllRoutes = ({ val }) => {
          <Route path='/bottomwear/:subcategory'element={<Bottomwear gender={val} />} />
          <Route path='/basics'element={<BasicsPage gender={val} />} /> 
          <Route path='/collections/:collection'element={<CollectionsPage gender={val} />} /> 
+    
+         <Route path='/topwear/:subcategory/:productId'element={<SingleProductPage />} />  
+         <Route path='/bottomwear/:subcategory/:productId'element={<SingleProductPage />} />  
+         <Route path='/basics/:productId'element={<SingleProductPage />} />  
+         <Route path='/accessories/:subcategory/:productId'element={<SingleProductPage />} /> 
+         <Route path='/collections/:category/:productId'element={<SingleProductPage />} />   
+         <Route path='/cart' element={<CartPage/>}></Route> 
+         <Route path='/login' element={<Login/>}></Route>
+         <Route path='/register' element={<Register/>}></Route>
+         <Route path='/addnewaddress' element={<AddNewAddress/>}></Route>
+         <Route path="/payment" element={<Payment />} />
+
+
+ 
          <Route path='/accessories/:subcategory'element={<AccessoriesPage gender={val} />} />      
          <Route path='/membership' element={<Membership/>}></Route>
          <Route path='/About' element={<About/>}></Route>

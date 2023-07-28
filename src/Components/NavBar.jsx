@@ -31,7 +31,10 @@ import {AiOutlineHeart} from 'react-icons/ai'
 import {FaRegUser} from 'react-icons/fa' 
 import {CiShoppingCart} from 'react-icons/ci'
 import { useContext } from 'react';
+import {useCart} from '../Context/CartContext';
+
 export default function WithSubnavigation() {
+  const { cartCount } = useCart();
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Box >
@@ -118,17 +121,14 @@ export default function WithSubnavigation() {
              
              <AiOutlineHeart/>
           </Button>
-         <Link to={"/cart"} alignItems="center">
-         <Button
-            as={'a'}
-            fontSize={'xl'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-           <CiShoppingCart/>
-           <span style={{marginBottom:"20px", color:"red",borderRadius:"60%" }}>0</span>
+          <Link to="/cart" alignItems="center" mr={4}>
+          <Button as="a" fontSize="xl" fontWeight={400} variant="link" href="#">
+            <CiShoppingCart />
+            <span style={{ marginBottom: "20px", color: "red", borderRadius: "60%" }}>
+              {cartCount}
+            </span>
           </Button>
-         </Link>
+        </Link>
         </Stack>
       </Flex>
 
@@ -285,6 +285,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 
 const NAV_ITEMS= [
+ 
   {
     label: 'TOP WEAR',
     children: [
@@ -339,9 +340,9 @@ const NAV_ITEMS= [
         href: '/topwear/drop-cutt-shirt',
       },
       {
-        label: 'Graphics Oversized T-shirt',
+        label: 'Vests',
         
-        href: '/topwear/graphicsoversizedt-shirt',
+        href: '/topwear/vests',
       },
       
     ],
@@ -358,27 +359,22 @@ const NAV_ITEMS= [
       {
         label: 'Freestyle Leggings ',
         
-        href: '#',
+        href: '/bottomwear/leggings',
       },
       {
         label: 'Innerwear ',
         
-        href: '#',
+        href: '/bottomwear/innerwear',
       },
       {
         label: 'Shorts',
         
-        href: '#',
-      },
-      {
-        label: 'All Days Pants',
-        
-        href: '#',
+        href: '/bottomwear/shorts',
       },
       {
         label: 'Pajamas',
         
-        href: '#',
+        href: '/bottomwear/pajamas',
       }
       
     ],
@@ -388,23 +384,23 @@ const NAV_ITEMS= [
   {
     label: 'BASICS',
     href:'/basics'
-    // children: [
-    //   {
-    //     label: 'Mens',
-    //     subLabel: 'Shop By Mens Category',
-    //     href: '/mensproducts',
-    //   },
-    //   {
-    //     label: 'Womens',
-    //     subLabel: 'Shop By Womens Category',
-    //     href: '/womensproducts',
-    //   },
-    //   {
-    //     label: 'Kids',
-    //     subLabel: 'Shop By Kids Category',
-    //     href: '/kidsproducts',
-    //   },
-    // ],
+    //children: [
+      // {
+      //   label: 'Mens',
+      //   subLabel: 'Shop By Mens Category',
+      //   href: '/mensproducts',
+      // },
+      // {
+      //   label: 'Womens',
+      //   subLabel: 'Shop By Womens Category',
+      //   href: '/womensproducts',
+      // },
+      // {
+      //   label: 'Kids',
+      //   subLabel: 'Shop By Kids Category',
+      //   href: '/kidsproducts',
+      // },
+  //  ],
   },
   {
     label: 'COLLECTIONS',
