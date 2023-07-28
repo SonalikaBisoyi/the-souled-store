@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import axios from 'axios';
 import { Button, Box, Flex, FormControl, FormLabel, Input, InputGroup, InputRightElement, HStack, Stack, Heading, Text } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
@@ -19,20 +18,31 @@ export default function Register() {
       email,
       password,
     };
-    fetchdataforuser(obj);
-  };
+    console.log(obj);
 
-  const fetchdataforuser = (obj) => {
-    axios.post('http://localhost:3002/users', obj)
-      .then((res) => {
-        if (res.status === 201) {
+    //Send the user data to the userData
+    fetch('../userData.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((response) => {
+        if (response.status === 200) {
           setregsuccess(true);
+        } else {
+          alert('Error registering user');
         }
       })
       .catch((error) => {
         console.error('Error adding user data:', error);
+        alert('Error registering user');
       });
   };
+  // localStorage.setItem('userData', JSON.stringify(obj));
+  //   setregsuccess(true);
+  // };
 
   if (regsuccess) {
     return <Navigate to="/login" />;
