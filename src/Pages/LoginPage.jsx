@@ -12,6 +12,7 @@ export default function Login() {
 
   const HandleLogin = () => {
     // Fetch the local JSON file (userData.json)
+
     fetch('http://localhost:3001/users')
       .then((response) => response.json())
       .then((data) => {

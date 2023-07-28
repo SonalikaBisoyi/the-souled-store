@@ -41,6 +41,9 @@ export default function Register() {
       console.error('Error adding user data:', error);
     }
   };
+  // localStorage.setItem('userData', JSON.stringify(obj));
+  //   setregsuccess(true);
+  // };
 
   if (regsuccess) {
     return <Navigate to="/login" />;
