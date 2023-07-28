@@ -17,14 +17,14 @@
 
  export default function About() {
    return (
-    <>
-     <Container as="div" bg="teal.600" maxWidth="100%" height="150px" >
+    <Box>
+     <Container as="div" bg="teal.600" maxWidth="100%"  marginTop="120px" >
          <Text color="white"  textAlign="center" paddingTop="50px">
              Our 'About Us' page would like to thank you from the bottom of its heart for visiting.<br/>
  It doesn't get a lot of attention usually, as people are busy surfing other, 'cooler' pages. The fact that you voluntarily decided to come here means a lot. Honestly. *sniff sniff*
          </Text>
         </Container> 
-        <Container as="div" bg="white" maxWidth="100%" height="300px" mb="0" >
+        <Container as="div" bg="white" maxWidth="100%" mb="0" >
          <HStack spacing={8}>
        <Feature 
          //title='Plan Money'
@@ -51,7 +51,8 @@
         
        />
      </HStack>
-     <Container as="div" bg="teal.600" maxWidth="100%" height="300px" mt="0" >
+     </Container>
+     <Container as="div" bg="teal.600" maxWidth="100%"  mt="0" >
          <Text color="white"  textAlign="center" paddingTop="30px" fontWeight="bold" fontSize="xl">
              Why we're called 'The Souled Store'
          </Text>
@@ -61,11 +62,11 @@
  We, at The Souled Store, love what we do- designs, products, marketing, and everything in between. Our goal is to give everyone something they'll love, something they can use to express themselves, and, simply put, something to put a smile on their face. So, whether it's superheroes, TV shows, pop culture, music, sports, or quirky, funny stuff you're looking for, we have something for everyone. Because each person is a special snowflake (whether or not they believe it), and they deserve only the most insane merchandise available out there! So, if you relate to the feeling, and believe in following one's heart (soul), hop along on this wonderful journey of ours, and help us spread the love!
          </Text>
         </Container>
-        <Container maxWidth="100%" pl="300px">
+        <Container maxWidth="100%" pl="300px"marginTop="100px" >
            <img src="https://tss-static-images.gumlet.io/banners/about-doodlebanner.png" alt = "Group"/>
         </Container>
       
-       <Container as="div" bg="teal.600" maxWidth="100%" height="300px" mt="0" >
+       <Container as="div" bg="teal.600" maxWidth="100%"  mt="0" >
        <Text color="white"  textAlign="center" paddingTop="30px" fontWeight="bold" fontSize="xl">
          The Team
        </Text>
@@ -80,7 +81,7 @@
          
        </Container>
        <Divider/>
-       <Container as="div" bg="white" maxWidth="100%" height="500px" mb="0">
+       <Container as="div" bg="white" maxWidth="100%"  mb="0">
          <HStack spacing={0}>
          <Feature 
          image='https://tss-static-images.gumlet.io/banners/about-testimonial.png'
@@ -116,7 +117,7 @@
         
        />
          </HStack>
-     </Container>
+    
       
 
      </Container>
@@ -126,7 +127,7 @@
     
 
     
-   </>      
+   </Box>      
    
    )
  }

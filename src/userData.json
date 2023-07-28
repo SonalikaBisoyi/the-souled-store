@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "age": 30,
+      "email": "john@example.com",
+      "name": "John Doe",
+      "password": "secret1"
+    },
+    {
+      "id": 2,
+      "age": 25,
+      "email": "jane@example.com",
+      "name": "Jane Smith",
+      "password": "secret2"
+    },
+    {
+      "name": "sona",
+      "age": "20",
+      "email": "s@gmail.com",
+      "password": "secret3",
+      "id": 3
+    },
+    {
+      "name": "sona",
+      "age": "34",
+      "email": "s@gmail.com",
+      "password": "qwe123",
+      "id": 4
+    }
+  ]
+}

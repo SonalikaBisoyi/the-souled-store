@@ -8,7 +8,7 @@ import { Box, Flex, Image} from '@chakra-ui/react';
 export default function Careers() {
   return (
    <>
-        <Container as="div" bg="teal.600" maxWidth="100%" height="150px" >
+        <Container as="div" bg="teal.600" maxWidth="100%" height="150px" marginTop={'120px'}>
             <Center>
                 <Text color="white"  textAlign="center" paddingTop="20px">
                     We're a bunch of nerdy, like-minded people who do what they love and love what they do. We believe that Mondays should be as fun as Fridays.<br/>
