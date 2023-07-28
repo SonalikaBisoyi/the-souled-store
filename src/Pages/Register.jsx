@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import axios from 'axios';
 import { Button, Box, Flex, FormControl, FormLabel, Input, InputGroup, InputRightElement, HStack, Stack, Heading, Text } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
@@ -12,32 +11,40 @@ export default function Register() {
   const [age, setage] = useState(10);
   const [regsuccess, setregsuccess] = useState(false);
 
-  const handleLogin = () => {
-    const obj = {
+  const handleLogin = async () => {
+    let obj = {
       name,
       age,
       email,
       password,
     };
-    fetchdataforuser(obj);
+    console.log(obj);
+    await fetchdataforuser(obj);
   };
 
-  const fetchdataforuser = (obj) => {
-    axios.post('http://localhost:3002/users', obj)
-      .then((res) => {
-        if (res.status === 201) {
-          setregsuccess(true);
-        }
-      })
-      .catch((error) => {
-        console.error('Error adding user data:', error);
+  const fetchdataforuser = async (obj) => {
+    try {
+      console.log(obj);
+      const response = await fetch('http://localhost:3001/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(obj),
       });
+      setregsuccess(true);
+
+      // if (response.status === 201) {
+        
+      // }
+    } catch (error) {
+      console.error('Error adding user data:', error);
+    }
   };
 
   if (regsuccess) {
     return <Navigate to="/login" />;
   }
-
   return (
     <Flex minH={'100vh'} align={'center'} justify={'center'}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>

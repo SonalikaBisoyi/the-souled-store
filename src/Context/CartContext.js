@@ -1,7 +1,3 @@
-//import React, { createContext, useState } from 'react';
-//import data from '../data.json';
-// CartContext.js
-
 import React, { createContext, useState, useContext } from 'react';
 
 const CartContext = createContext();
@@ -31,13 +27,13 @@ export const CartProvider = ({ children }) => {
     setCartCount((prevCount) => prevCount - 1);
   };
 
-  const clearCart = () => {
+  const clearCartItems = () => {
     setCartItems([]);
     setCartCount(0);
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, cartCount, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider value={{ cartItems, cartCount, addToCart, removeFromCart, clearCartItems }}>
       {children}
     </CartContext.Provider>
   );
