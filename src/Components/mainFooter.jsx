@@ -65,7 +65,7 @@ export default function MainFooter() {
         
         <Stack align={'flex-start'} >
         <Box color="red" ><ListHeader >Need Help</ListHeader></Box>
-            <Link href={'#'}>Contact Us</Link>
+            <Link href={'/ManageOrderPage'}>Contact Us</Link>
             <Link href={'#'}>Track Order</Link>
             <Link href={'#'}>Return & Refunds</Link>
             <Link href={'#'}>FAQs</Link>
