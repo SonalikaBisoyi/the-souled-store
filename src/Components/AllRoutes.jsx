@@ -13,6 +13,7 @@ import Membership from '../Pages/Membership';
 import About from '../Pages/About';
 import Careers from '../Pages/Careers';
 import SouledArmy from '../Pages/SouledArmy';
+import ManageOrderPage from '../Pages/ManageOrderPage';
 
 const AllRoutes = ({ val }) => {
   return (
@@ -30,6 +31,7 @@ const AllRoutes = ({ val }) => {
          <Route path='/About' element={<About/>}></Route>
          <Route path='/Careers' element={<Careers/>}></Route>
          <Route path='/SouledArmy' element={<SouledArmy/>}></Route>
+         <Route path='/ManageOrderPage' element={<ManageOrderPage/>}></Route>
     </Routes>
   )
 }
