@@ -11,34 +11,35 @@ export default function Register() {
   const [age, setage] = useState(10);
   const [regsuccess, setregsuccess] = useState(false);
 
-  const handleLogin = () => {
-    const obj = {
+  const handleLogin = async () => {
+    let obj = {
       name,
       age,
       email,
       password,
     };
     console.log(obj);
+    await fetchdataforuser(obj);
+  };
 
-    //Send the user data to the userData
-    fetch('../userData.json', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(obj),
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          setregsuccess(true);
-        } else {
-          alert('Error registering user');
-        }
-      })
-      .catch((error) => {
-        console.error('Error adding user data:', error);
-        alert('Error registering user');
+  const fetchdataforuser = async (obj) => {
+    try {
+      console.log(obj);
+      const response = await fetch('http://localhost:3001/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(obj),
       });
+      setregsuccess(true);
+
+      // if (response.status === 201) {
+        
+      // }
+    } catch (error) {
+      console.error('Error adding user data:', error);
+    }
   };
   // localStorage.setItem('userData', JSON.stringify(obj));
   //   setregsuccess(true);
@@ -47,7 +48,6 @@ export default function Register() {
   if (regsuccess) {
     return <Navigate to="/login" />;
   }
-
   return (
     <Flex minH={'100vh'} align={'center'} justify={'center'}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
