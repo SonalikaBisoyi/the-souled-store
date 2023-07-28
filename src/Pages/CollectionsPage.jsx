@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Box, Flex, Input, Image, Select, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
-   Checkbox, Icon,Button,SimpleGrid  } from '@chakra-ui/react';
-import { AiOutlineCheck } from 'react-icons/ai'; 
+   Checkbox, Icon,Button,SimpleGrid ,Text} from '@chakra-ui/react';
 import ProductCard from '../Components/ProductCard';
 import data from '../data.json';
 import { useParams, Link } from 'react-router-dom';
@@ -109,20 +108,32 @@ const CollectionsPage = ({ gender }) => {
 
  
   return (
-    <Box className="page-container">
+    <Box className="page-container" marginTop="150px">
       {/* First 20% with image */}
       <Box className="image-container">
-        <Image src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/category/catban-120230602125221.jpg?format=webp&w=1300&dpr=1.5" alt="Image" />
+        <Image src="https://prod-img.thesouledstore.com/public/theSoul/uploads/themes/3404820230612190707.jpg?format=webp&w=1300&dpr=1.5" alt="Image" />
       </Box>
-      <Box className="sort-container">
-        <Select value={sortingOption} onChange={(e) => setSortingOption(e.target.value)}>
-          <option value="">Sort by</option>
-          <option value="AtoZ">Name: A to Z</option>
-          <option value="ZtoA">Name: Z to A</option>
-          <option value="PriceLowToHigh">Price: Low to High</option>
-          <option value="PriceHighToLow">Price: High to Low</option>
-        </Select>
-      </Box>
+      <Box flex="1">
+          <Flex alignItems="center" justifyContent="space-between" mb="10px">
+            {/* Sort by Dropdown */}
+            <Box className="sort-container">
+              <Select
+                size="sm"
+                value={sortingOption}
+                onChange={(e) => setSortingOption(e.target.value)}
+              >
+                <option value="">Sort by</option>
+                <option value="AtoZ">Name: A to Z</option>
+                <option value="ZtoA">Name: Z to A</option>
+                <option value="PriceLowToHigh">Price: Low to High</option>
+                <option value="PriceHighToLow">Price: High to Low</option>
+              </Select>
+            </Box>
+
+            {/* Number of Products */}
+            <Text fontSize="sm">Total Products: {filteredProducts.length}</Text>
+          </Flex>
+          </Box>
       <Flex className="columns-container">
         {/* 30% column with search bar and filter */}
         <Box className="search-filter-container" w="30%">
