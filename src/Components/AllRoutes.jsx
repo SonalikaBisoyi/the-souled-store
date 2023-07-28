@@ -24,6 +24,8 @@ import ManageOrderPage from '../Pages/ManageOrderPage';
 
 import Tc from '../Pages/Tc';
 import Privacy from '../Pages/Privacy';
+import AdminLogin from '../Pages/AdminLogin';
+import AdminPage from '../Pages/AdminPage';
 
 const AllRoutes = ({ val }) => {
   return (
@@ -46,10 +48,7 @@ const AllRoutes = ({ val }) => {
          <Route path='/login' element={<Login/>}></Route>
          <Route path='/register' element={<Register/>}></Route>
          <Route path='/addnewaddress' element={<AddNewAddress/>}></Route>
-         <Route path="/payment" element={<Payment />} />
-
-
- 
+         <Route path="/payment" element={<Payment />} /> 
          <Route path='/accessories/:subcategory'element={<AccessoriesPage gender={val} />} />      
          <Route path='/membership' element={<Membership/>}></Route>
          <Route path='/About' element={<About/>}></Route>
@@ -60,6 +59,8 @@ const AllRoutes = ({ val }) => {
 
          <Route path='/Tc' element={<Tc/>}></Route>
          <Route path='/Privacy' element={<Privacy/>}></Route>
+        <Route path='/adminlogin' element={<AdminLogin/>}></Route>
+         <Route path='/admin' element={<AdminPage/>}></Route>
 
     </Routes>
   )
