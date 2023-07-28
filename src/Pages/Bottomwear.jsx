@@ -92,7 +92,7 @@ const Bottomwear = ({ gender }) => {
   const [selectedPriceRange, setSelectedPriceRange] = useState([0, 100]);
   const [sortingOption, setSortingOption] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('topwear');
+  const [selectedCategory, setSelectedCategory] = useState('bottomwear');
   const [isSizeAccordionOpen, setSizeAccordionOpen] = useState(false);
   const themeOptions = ['Captain America', 'X-Men','Marvel','Spider-Man','Black Panther','Iron Man','Captain Marvel',
   'Punisher','Doctor Strange','DC Comics','Batman','Superman','Wonder Woman','The Flash','Hulk','Thor','Joker',
@@ -281,7 +281,7 @@ const Bottomwear = ({ gender }) => {
         <Flex className="cards-container" flexWrap="wrap" w="70%">
           {/* Product Cards */}
           {filteredProducts.map((product) => (
-        <Link key={product.id} to={`/bottomwear/${product.id}`}>
+        <Link key={product.id}  to={`/bottomwear/${product.subcategory}/${product.id}`}>
           <ProductCard
             product={product}
             selected={selectedProducts.includes(product.id)}
