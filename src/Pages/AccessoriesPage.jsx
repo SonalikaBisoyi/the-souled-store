@@ -1,82 +1,7 @@
-// import React, { useState, useEffect } from 'react';
-// import { Box, Flex, Input, Image, Select, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Badge } from '@chakra-ui/react';
-// import ProductCard from '../Components/ProductCard';
-// import data from '../data.json';
-// import { useParams,Link } from 'react-router-dom';
 
-// const TopwearPage =({ gender })=> {
-//   const { subcategory } = useParams();
-//   const [selectedSubcategory, setSelectedSubcategory] = useState(subcategory || 'ALL');
-//   const [filteredProducts, setFilteredProducts] = useState([]);
-//   const [selectedProducts, setSelectedProducts] = useState([]);
-//   const [selectedThemes, setSelectedThemes] = useState([]);
-//   const [selectedSizes, setSelectedSizes] = useState([]);
-//   const [selectedPriceRange, setSelectedPriceRange] = useState([0, 100]);
-//   const [sortingOption, setSortingOption] = useState('');
-//   const [searchTerm, setSearchTerm] = useState('');
-//   const [selectedCategory, setSelectedCategory] = useState('topwear');
-
-//   useEffect(() => {
-//     setSelectedSubcategory(subcategory || '');
-
-//     // Function to filter products based on selected themes, sizes, and price range
-//     const filteredProductsByThemesSizesPrices = data.products.filter((product) => {
-//       const isThemeMatch =
-//         selectedThemes.length === 0 || selectedThemes.some((theme) => product.themes.includes(theme));
-//       const isSizeMatch =
-//         selectedSizes.length === 0 || selectedSizes.some((size) => product.sizes.includes(size));
-//       const isPriceMatch =
-//         product.price >= selectedPriceRange[0] && product.price <= selectedPriceRange[1];
-//       return isThemeMatch && isSizeMatch && isPriceMatch;
-//     });
-
-//     // Function to filter products based on selected products
-//     const filteredProductsBySelectedProducts = filteredProductsByThemesSizesPrices.filter(
-//       (product) => !selectedProducts.includes(product.id)
-//     );
-
-//     // Function to filter products based on the selected subcategory (selectedSubcategory)
-//     const filteredProductsBySubcategory = selectedSubcategory === 'ALL'
-//       ? filteredProductsBySelectedProducts // Display all products when 'ALL' is selected
-//       : filteredProductsBySelectedProducts.filter((product) => product.subcategory === selectedSubcategory);
-
-//     // Function to handle sorting
-//     let sortedProducts = [...filteredProductsBySubcategory];
-
-//     switch (sortingOption) {
-//       case 'AtoZ':
-//         sortedProducts = sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-//         break;
-//       case 'ZtoA':
-//         sortedProducts = sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
-//         break;
-//       case 'PriceLowToHigh':
-//         sortedProducts = sortedProducts.sort((a, b) => a.price - b.price);
-//         break;
-//       case 'PriceHighToLow':
-//         sortedProducts = sortedProducts.sort((a, b) => b.price - a.price);
-//         break;
-//       default:
-//         // No sorting option selected, do nothing
-//         break;
-//     }
-
-//     setFilteredProducts(sortedProducts);
-
-//   }, [selectedProducts, selectedThemes, selectedSizes, selectedPriceRange, sortingOption, selectedSubcategory]);
-
-
-  
-//     const handleProductSelection = (productId) => {
-//       if (selectedProducts.includes(productId)) {
-//         setSelectedProducts((prevSelected) => prevSelected.filter((id) => id !== productId));
-//       } else {
-//         setSelectedProducts((prevSelected) => [...prevSelected, productId]);
-//       }
-//     }; 
 import React, { useState, useEffect } from 'react';
 import { Box, Flex, Input, Image, Select, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
-   Checkbox, Icon,Button,SimpleGrid  } from '@chakra-ui/react';
+   Checkbox, Icon,Button,SimpleGrid ,Text } from '@chakra-ui/react';
 import { AiOutlineCheck } from 'react-icons/ai'; 
 import ProductCard from '../Components/ProductCard';
 import data from '../data.json';
@@ -184,20 +109,32 @@ const AccessoriesPage = ({ gender }) => {
 
  
   return (
-    <Box className="page-container">
+    <Box className="page-container" marginTop="150px">
       {/* First 20% with image */}
       <Box className="image-container">
-        <Image src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/category/catban-120230602125221.jpg?format=webp&w=1300&dpr=1.5" alt="Image" />
+        <Image src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/Homepage-Banner_Black-Panther-Knit-Sneakers_1.jpg?format=webp&w=1300&dpr=1.5" alt="Image" />
       </Box>
-      <Box className="sort-container">
-        <Select value={sortingOption} onChange={(e) => setSortingOption(e.target.value)}>
-          <option value="">Sort by</option>
-          <option value="AtoZ">Name: A to Z</option>
-          <option value="ZtoA">Name: Z to A</option>
-          <option value="PriceLowToHigh">Price: Low to High</option>
-          <option value="PriceHighToLow">Price: High to Low</option>
-        </Select>
-      </Box>
+      <Box flex="1">
+          <Flex alignItems="center" justifyContent="space-between" mb="10px">
+            {/* Sort by Dropdown */}
+            <Box className="sort-container">
+              <Select
+                size="sm"
+                value={sortingOption}
+                onChange={(e) => setSortingOption(e.target.value)}
+              >
+                <option value="">Sort by</option>
+                <option value="AtoZ">Name: A to Z</option>
+                <option value="ZtoA">Name: Z to A</option>
+                <option value="PriceLowToHigh">Price: Low to High</option>
+                <option value="PriceHighToLow">Price: High to Low</option>
+              </Select>
+            </Box>
+
+            {/* Number of Products */}
+            <Text fontSize="sm">Total Products: {filteredProducts.length}</Text>
+          </Flex>
+          </Box>
       <Flex className="columns-container">
         {/* 30% column with search bar and filter */}
         <Box className="search-filter-container" w="30%">
